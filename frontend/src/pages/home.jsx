@@ -25,7 +25,7 @@ function Home() {
           <div className="sidebar-avatar"></div>
           <div>
             <h3>Padho Bacho!</h3>
-            <p>created by sameer*</p>
+            <p>developed by sameer*</p>
           </div>
         </div>
 
