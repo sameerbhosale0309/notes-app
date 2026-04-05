@@ -42,7 +42,7 @@ function SubjectNotes() {
         </div>
       </aside>
 
-      <main className="main-content  fade-up">
+      <main className="main-content ">
         <div className="subject-header">
           <Link to="/" className="back-link">
             ← back to subjects
