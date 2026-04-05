@@ -4,7 +4,7 @@ import Home from './pages/home';
 import SubjectNotes from './pages/subjectnotes';
 import AdminUpload from './pages/adminupload';
 import CustomCursor from './components/customcursor';
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
