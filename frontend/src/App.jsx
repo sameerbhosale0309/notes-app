@@ -4,6 +4,7 @@ import Home from './pages/home';
 import SubjectNotes from './pages/subjectnotes';
 import AdminUpload from './pages/adminupload';
 import CustomCursor from './components/customcursor';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/subject/:subjectName" element={<SubjectNotes />} />
         <Route path="/admin-upload" element={<AdminUpload />} />
       </Routes>
+        <Analytics />
     </Router>
   );
 }
