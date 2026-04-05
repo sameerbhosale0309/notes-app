@@ -4,14 +4,18 @@ import SubjectCard from '../components/subjectcard';
 
 function Home() {
   const [subjects, setSubjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchSubjects = async () => {
       try {
+        setLoading(true);
         const res = await api.get('/subjects');
         setSubjects(res.data);
       } catch (error) {
         console.error('error fetching subjects', error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -56,11 +60,19 @@ function Home() {
             <span>{subjects.length} available</span>
           </div>
 
-          <div className="subjects-grid">
-            {subjects.map((subject) => (
-              <SubjectCard key={subject.id} subject={subject} />
-            ))}
-          </div>
+          {loading ? (
+            <div className="skeleton-grid">
+              {[...Array(6)].map((_, i) => (
+                <div className="subject-skeleton" key={i}></div>
+              ))}
+            </div>
+          ) : (
+            <div className="subjects-grid">
+              {subjects.map((subject) => (
+                <SubjectCard key={subject.id} subject={subject} />
+              ))}
+            </div>
+          )}
         </section>
       </main>
     </div>
