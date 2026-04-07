@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import api from '../services/api';
 import SubjectCard from '../components/subjectcard';
 
+
 function Home() {
   const [subjects, setSubjects] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,7 +27,9 @@ function Home() {
     <div className="page-shell">
       <aside className="sidebar">
         <div className="sidebar-brand">
-          <div className="sidebar-avatar"></div>
+          <div className="sidebar-avatar">
+            
+          </div>
           <div>
             <h3>Padho Bacho!</h3>
             <p>developed by sameer*</p>

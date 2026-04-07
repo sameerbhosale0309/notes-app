@@ -1,5 +1,7 @@
 const supabase = require('../config/supabaseClient');
 const fs = require('fs');
+const NodeCache = require('node-cache');
+const subjectsCache = new NodeCache({ stdTTL: 300 }); // cache for 300 seconds (5 minutes)
 
 const getSubjects = async (req, res) => {
   try {

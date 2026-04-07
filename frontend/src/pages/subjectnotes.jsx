@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import api from '../services/api';
 import NoteItem from '../components/noteitem';
 
+
 function SubjectNotes() {
   const { subjectName } = useParams();
   const decodedSubject = decodeURIComponent(subjectName);
@@ -30,7 +31,9 @@ function SubjectNotes() {
     <div className="page-shell">
       <aside className="sidebar">
         <div className="sidebar-brand">
-          <div className="sidebar-avatar"></div>
+          <div className="sidebar-avatar">
+  
+          </div>
           <div>
             <h3>Padho Bacho!</h3>
             <p>developed by sameer*</p>

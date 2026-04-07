@@ -6,10 +6,12 @@ import AdminUpload from './pages/adminupload';
 import CustomCursor from './components/customcursor';
 import { Analytics } from '@vercel/analytics/react';
 
+
 function App() {
   return (
     <Router>
       <CustomCursor />
+     
       <Toaster
   position="top-right"
   toastOptions={{
