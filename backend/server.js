@@ -1,12 +1,20 @@
 const express = require('express');
-const cors = require('cors');
+
 require('dotenv').config();
 
 const notesRoutes = require('./routes/notesRoutes');
 
 const app = express();
 
-app.use(cors());
+const cors = require('cors');
+
+app.use(cors({
+  origin: [
+    'http://localhost:5173', // for local development
+    'https://notes-app-pzlr.vercel.app', // your vercel frontend
+  ],
+  credentials: true,
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
